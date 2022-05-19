@@ -1,0 +1,97 @@
+#add {
+  font-size: smaller;
+  margin-left: 70%;
+}
+
+@media screen and (max-width: 600px) {
+
+  .ideas__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .idea {
+    width: 100%;
+    height: auto;
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    background-color: rgba(82, 37, 37, 0.726);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 0.5rem black;
+    margin: 1rem;
+    color: white;
+    box-lines: inherit;
+    outline: dashed 1px rgba(0, 0, 0, 0.596);
+
+  }
+
+
+}
+
+@media screen and (min-width: 600px) {
+
+  .ideas__section {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+
+  .idea {
+    width: 70%;
+    height: auto;
+    width: 100%;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    background-color: rgba(82, 37, 37, 0.719);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 0.5rem black;
+    margin: 1rem;
+    color: white;
+    box-lines: inherit;
+    outline: dashed 1px black;
+
+  }
+
+
+}
+
+@media screen and (min-width: 800px) {
+
+  .ideas__section {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+  }
+
+  .idea {
+    width: 30%;
+    height: auto;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    background-color: c;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 0.5rem black;
+    margin: 1rem;
+    color: white;
+    box-lines: inherit;
+    outline: dashed 1px rgb(208, 234, 11);
+  }
+
+}
+
+#p {
+  font-size: 1.3em;
+}
+
+#h1idea {
+  color: rgba(255, 14, 14, 0.708);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}

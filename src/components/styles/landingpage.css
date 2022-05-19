@@ -1,0 +1,53 @@
+.body {
+  background-image: url("C:\Users\user\Desktop\fcap-pfe\client\src\assets\images\image.jpg");
+  min-height: 87vh;
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+.button {
+  background: #df68bb8e;
+  color: rgb(109, 6, 6);
+  border: none;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  margin-left: 805px;
+  top: 300px;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+
+.button:hover {
+  background: rgb(109, 6, 6);
+  color: #df68bb8e;
+}
+
+.button:before,
+.button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #df68bb8e;
+  transition: 400ms ease all;
+}
+
+.button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.button:hover:before,
+.button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}

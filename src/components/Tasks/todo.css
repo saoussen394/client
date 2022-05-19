@@ -1,0 +1,75 @@
+#center {
+	position: absolute;
+	/*top: 50%;
+	left: 50%;
+	transform: translate(-50%,-30%);*/
+	left: 30%;
+	right: 45%;
+
+}
+
+#todo-cmp {
+	background: #ffffff;
+	color: #497081;
+	padding: 10px 30px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 14px rgb(17, 0, 0);
+	width: 700px;
+	height: auto;
+}
+
+#todo-cmp__header {
+	text-align: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #ddd;
+
+}
+
+
+
+#todo-cmp__list {
+	list-style: none;
+	padding: 0;
+}
+
+#litodo {
+	padding: 10px 0 15px;
+	margin: 0;
+	text-align: left;
+	width: 100%;
+}
+
+#labeltodo {
+	margin-left: 30px;
+	font-size: 1rem;
+	width: 100%;
+	display: block;
+}
+
+#add {
+	float: right;
+	opacity: 0;
+}
+
+#spantodo {
+	position: relative;
+	display: block;
+	transition: all 550ms ease-in-out;
+	font-size: medium;
+}
+
+
+#add+#spantodo::after {
+	content: " Add todo ";
+	display: block;
+	border: 3px solid #066892;
+	border-radius: 13px;
+	position: absolute;
+	right: 0;
+	top: 1px;
+	z-index: 10;
+
+	transition: all 550ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+}
