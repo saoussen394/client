@@ -43,20 +43,21 @@ function EmployeeDetail() {
                 setRecord(response.data);
             });
     };
-const deleteRecord = (productId) => {
-    alert("archivedd Successfully");
-
+const ArchiveRecord = (productId) => {
+    swal({title:"Poof! Archiving completed successfully!", 
+    icon: "success",
+});
         axios
-            .delete(`http://localhost:5000/api/v1/employee/${productId}`)
+            .put(`http://localhost:5000/api/v1/employee//archiveRecord/${productId}`)
             .then((result) => {
-                                swal({title:"Poof! Deletion completed successfully!", 
-                icon: "success",});
-
+                
+                loadEmployeeDetail();
             })
             .catch(() => {
                 alert("Error in the Code");
             });
     };    
+ 
 
     const createHistory = () => {
     
