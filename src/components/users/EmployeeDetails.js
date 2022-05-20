@@ -43,20 +43,20 @@ function EmployeeDetail() {
                 setRecord(response.data);
             });
     };
-const deleteRecord = (productId) => {
-    alert("archivedd Successfully");
-
+const ArchiveRecord = (productId) => {
+    swal({title:"Poof! Archiving completed successfully!", 
+    icon: "success",
+});
         axios
-            .delete(`http://localhost:5000/api/v1/employee/${productId}`)
+            .put(`http://localhost:5000/api/v1/employee//archiveRecord/${productId}`)
             .then((result) => {
-                                swal({title:"Poof! Deletion completed successfully!", 
-                icon: "success",});
-
+                
+                loadEmployeeDetail();
             })
             .catch(() => {
                 alert("Error in the Code");
             });
-    };    
+    };      
 
     const createHistory = () => {
     
@@ -137,24 +137,27 @@ onClick={searchRecords}><ImSearch id="btnsearch"/></button>
                                         show={modalShowedit === name.id}
                                         onHide={() => setModalShowedit(null)} 
                                          />:<></>} 
-<button className="btn btn-danger btn-sm mr-2"
+                                            <button  
+                                                className="btn btn-outline-warning btn-sm mr-2"
+                                                
                                                 onClick={() => {
                                                     const confirmBox =
                                                         window.confirm(
-                                                            "Do you really want to archived " +
+                                                            "Do you really want to archive " +
                                                                 name.first_name
                                                         );
                                                     if (confirmBox === true) {
-                                                        deleteRecord(name.id);createHistory()
-                                                                }else{
-                swal({title:"Don't worry, it won't be archivedd!"});
-            }
-
+                                                        ArchiveRecord(name.id)  ;createHistory()
+                                                    }
+                                                    else{
+                                                        swal({title:"Don't worry, it won't be archived!"});
+                                                    }
                                                     
                                                 }}
                                             >
-                                                Delete
-                                            </button>                                        </td>
+                                                Archive
+                                            </button>     
+                                       </td>
                                     </tr>
                                 ))}
                             </tbody>
